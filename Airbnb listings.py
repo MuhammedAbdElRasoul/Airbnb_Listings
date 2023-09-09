@@ -11,8 +11,8 @@ airbnb = pd.read_csv("listings.csv")
 # print(airbnb.head())
 
 # Show some information about the DataFrame
-# print(airbnb.shape)
-# print(airbnb.info())
+print(airbnb.shape)
+print(airbnb.info())
 
 
 
@@ -123,29 +123,12 @@ plt.title("Number of Listings by Room Type")
 plt.show()
 
 
+# Scatter plot of the price and the Availability 
 
+# Calculate the correlation between price and availability_365
+correlation = airbnb['price'].corr(airbnb['availability_365'])
+print("Correlation between price and availability_365:", correlation)
 
-
-#                                          # Bar chart # 
-                                       
-# def approxiamation(row) :
-#     if row != "NaN" :
-#         return round(row)
-# # Filling the NaN values of the column with the mean of the rest of values -----> 'review_scores_rating'
-# airbnb['review_scores_rating'].fillna(airbnb['review_scores_rating'].mean()  , inplace=True)   
-# airbnb['review_scores_rating'] = airbnb['review_scores_rating'].apply(approxiamation) 
-# # print(airbnb['review_scores_rating'])
-
-# # Count the values of this features 
-# count = airbnb['review_scores_rating'].value_counts() # print(count)
-# review_count_df = pd.DataFrame(count)
-# plt.bar(review_count_df.T.columns , count , edgecolor="black")
-# plt.xlabel("Review_Scores")
-# plt.ylabel("Counts of Review_scores")
-# plt.grid()
-# plt.show()
-
-#                                                      # Scatter Plot
 # plt.figure(figsize=(7,7))
 # plt.scatter(airbnb['availability_365'] ,airbnb['price'] , alpha=0.02)
 # plt.title("The Availability vs The Price")
@@ -155,7 +138,6 @@ plt.show()
 # plt.grid()
 # plt.show()
 
-# from the preceding scatter plot we can say that the relationship between the availability and the price is a linear relationship 
-# the prices of bookings do not affect by the availability  
+# from the preceding scatter plot we can say that the relationship between the availability and the price is a linear relationship which means that the prices of bookings are not affected by the availability  
 
 
