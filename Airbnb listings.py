@@ -1,5 +1,3 @@
-
-
 # Importing some important libraries which will help us in analyzing the dataset
 import pandas as pd 
 import matplotlib.pyplot as plt 
